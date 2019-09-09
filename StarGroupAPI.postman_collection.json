@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "99ee2ef2-c0a0-4e1c-86fb-f76de3fff70a",
+		"name": "StarGroupAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Assert  fixturesReturned",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e4cd45a-39cd-4aeb-ae01-e12a2f3ef6f8",
+						"exec": [
+							"",
+							"  ",
+							"pm.test(\"Should be 3 fixtures\", () => {",
+							"    pm.expect(pm.response.json().length).to.eql(3)",
+							"})   ",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify TeamId ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8364fbc7-f04a-45eb-bd25-1addc1738b80",
+						"exec": [
+							"",
+							"",
+							"pm.test(\"Check string expected is Home\", function () {",
+							"var jsonData = pm.response.json();",
+							"pm.expect(jsonData.footballFullState.teams[0].teamId).to.eql(\"HOME\")",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/fixture/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fixture",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assert FixtureIdValue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "91476467-866b-40fc-a946-a1e57d980c19",
+						"exec": [
+							"",
+							"pm.test(\"The fixtureId property is in the object and is a string\", () => {",
+							"    _.forEach(pm.response.json(), (arrItem) => {",
+							"        // The property is in the object",
+							"        pm.expect(arrItem).to.have.own.property('fixtureId')",
+							"        // The value is a string",
+							"        pm.expect(arrItem.fixtureId).to.be.a('string')",
+							"        ",
+							"        // If you wanted to do some additional checks",
+							"        pm.expect(arrItem.fixtureId).to.not.be.null",
+							"        pm.expect(arrItem.fixtureId).to.not.be.undefined",
+							"        pm.expect(arrItem.fixtureId).to.not.be.empty",
+							"    })",
+							"})",
+							"",
+							"////pm.test(\"Body matches string\", function () {",
+							"   // pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");",
+							"//});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNewFixture",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/fixture/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fixture",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNewFixture",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fixtureId\": \"5\",\r\n    \"fixtureStatus\": {\r\n        \"displayed\": false,\r\n        \"suspended\": true\r\n    },\r\n    \"footballFullState\": {\r\n        \"homeTeam\": \"Portsmouth\",\r\n        \"awayTeam\": \"Arsenal\",\r\n        \"finished\": true,\r\n        \"gameTimeInSeconds\": 500,\r\n        \"goals\": [\r\n            {\r\n                \"clockTime\": 640,\r\n                \"confirmed\": true,\r\n                \"id\": 908606,\r\n                \"ownGoal\": true,\r\n                \"penalty\": false,\r\n                \"period\": \"SECOND_HALF\",\r\n                \"playerId\": 675843,\r\n                \"teamId\": \"1\"\r\n            },\r\n            {\r\n                \"clockTime\": 964,\r\n                \"confirmed\": true,\r\n                \"id\": 234543,\r\n                \"ownGoal\": false,\r\n                \"penalty\": false,\r\n                \"period\": \"FIRST_HALF\",\r\n                \"playerId\": 47317,\r\n                \"teamId\": \"2\"\r\n            }\r\n        ],\r\n        \"period\": \"FIRST_HALF\",\r\n        \"possibles\": [],\r\n        \"corners\": [],\r\n        \"redCards\": [],\r\n        \"yellowCards\": [],\r\n        \"startDateTime\": \"2018-03-20T10:49:38.655Z\",\r\n        \"started\": true,\r\n        \"teams\": [\r\n            {\r\n                \"association\": \"HOME\",\r\n                \"name\": \"Portsmouths\",\r\n                \"teamId\": \"HOME\"\r\n            },\r\n            {\r\n                \"association\": \"HOME\",\r\n                \"name\": \"Leeds-United\",\r\n                \"teamId\": \"HOME\"\r\n            }\r\n        ]\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/fixture",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fixture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StoreNewFeature",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fixtureId\": \"4\",\r\n    \"fixtureStatus\": {\r\n        \"displayed\": false,\r\n        \"suspended\": true\r\n    },\r\n    \"footballFullState\": {\r\n        \"homeTeam\": \"Gongola United\",\r\n        \"awayTeam\": \"Leeds United\",\r\n        \"finished\": false,\r\n        \"gameTimeInSeconds\": 900,\r\n        \"goals\": [\r\n            {\r\n                \"clockTime\": 640,\r\n                \"confirmed\": true,\r\n                \"id\": 897606,\r\n                \"ownGoal\": false,\r\n                \"penalty\": false,\r\n                \"period\": \"FIRST_HALF\",\r\n                \"playerId\": 560617,\r\n                \"teamId\": \"1\"\r\n            },\r\n            {\r\n                \"clockTime\": 864,\r\n                \"confirmed\": true,\r\n                \"id\": 187002,\r\n                \"ownGoal\": false,\r\n                \"penalty\": false,\r\n                \"period\": \"FIRST_HALF\",\r\n                \"playerId\": 40817,\r\n                \"teamId\": \"2\"\r\n            }\r\n        ],\r\n        \"period\": \"FIRST_HALF\",\r\n        \"possibles\": [],\r\n        \"corners\": [],\r\n        \"redCards\": [],\r\n        \"yellowCards\": [],\r\n        \"startDateTime\": \"2018-03-20T10:49:38.655Z\",\r\n        \"started\": true,\r\n        \"teams\": [\r\n            {\r\n                \"association\": \"HOME\",\r\n                \"name\": \"Gongola United\",\r\n                \"teamId\": \"HOME\"\r\n            },\r\n            {\r\n                \"association\": \"AWAY\",\r\n                \"name\": \"Leeds-United\",\r\n                \"teamId\": \"HOME\"\r\n            }\r\n        ]\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/fixture",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fixture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteFeature_5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bfaf573b-89b8-4cca-9af1-98647c7d4a2b",
+						"exec": [
+							"",
+							"",
+							"pm.test(\"Check if fixtureId exist \", () => {",
+							"let json_response = JSON.parse(responseBody)",
+							"pm.expect(json_response[4].fixtureId).to.be.null",
+							"})",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/fixture/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fixture",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
