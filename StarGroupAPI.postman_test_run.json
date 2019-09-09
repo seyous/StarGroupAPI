@@ -1,0 +1,381 @@
+{
+	"id": "2ee3648d-67fd-4320-aee0-a46746d3e427",
+	"name": "StarGroupAPI",
+	"allTests": [],
+	"timestamp": "2019-09-07T16:03:02.923Z",
+	"collection_id": "99ee2ef2-c0a0-4e1c-86fb-f76de3fff70a",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "99ee2ef2-c0a0-4e1c-86fb-f76de3fff70a",
+		"name": "StarGroupAPI",
+		"description": "",
+		"auth": null,
+		"events": null,
+		"variables": [],
+		"order": [
+			"f586339a-0209-4b77-811f-8c8cc8baf905",
+			"9fc5ce32-f7d6-4d93-9164-c4ed49aa624c",
+			"b31d2ea3-2f07-47f6-8d16-a2ed102b0a93",
+			"d5aa1b75-6006-418f-82b1-8baabc260a92",
+			"32345fe1-399f-49b8-9036-7a9f59fe610c",
+			"cb084931-9c49-409e-887f-ee87686219b1",
+			"a1eeceb2-0a7a-4556-ac76-c6bf50d77b23"
+		],
+		"folders_order": [],
+		"owner": "8481518",
+		"favorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "Assert  fixturesReturned",
+			"id": "f586339a-0209-4b77-811f-8c8cc8baf905",
+			"url": "http://localhost:3000/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Should be 3 fixtures": false
+			},
+			"testPassFailCounts": {
+				"Should be 3 fixtures": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"16"
+			],
+			"allTests": [
+				{
+					"Should be 3 fixtures": false
+				}
+			],
+			"time": "16",
+			"totalRequestTime": "16",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify TeamId ",
+			"id": "9fc5ce32-f7d6-4d93-9164-c4ed49aa624c",
+			"url": "http://localhost:3000/fixture/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Check string expected is Home": true
+			},
+			"testPassFailCounts": {
+				"Check string expected is Home": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"69"
+			],
+			"allTests": [
+				{
+					"Check string expected is Home": true
+				}
+			],
+			"time": "69",
+			"totalRequestTime": "69",
+			"iterationResults": {}
+		},
+		{
+			"name": "Assert FixtureIdValue",
+			"id": "b31d2ea3-2f07-47f6-8d16-a2ed102b0a93",
+			"url": "http://localhost:3000/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"The fixtureId property is in the object and is a string": true
+			},
+			"testPassFailCounts": {
+				"The fixtureId property is in the object and is a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"The fixtureId property is in the object and is a string": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetNewFixture",
+			"id": "d5aa1b75-6006-418f-82b1-8baabc260a92",
+			"url": "http://localhost:3000/fixture/4",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "CreateNewFixture",
+			"id": "32345fe1-399f-49b8-9036-7a9f59fe610c",
+			"url": "http://localhost:3000/fixture",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"2013"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "2013",
+			"totalRequestTime": "2013",
+			"iterationResults": {}
+		},
+		{
+			"name": "StoreNewFeature",
+			"id": "cb084931-9c49-409e-887f-ee87686219b1",
+			"url": "http://localhost:3000/fixture",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"5009"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "5009",
+			"totalRequestTime": "5009",
+			"iterationResults": {}
+		},
+		{
+			"name": "DeleteFeature_5",
+			"id": "a1eeceb2-0a7a-4556-ac76-c6bf50d77b23",
+			"url": "http://localhost:3000/fixture/5",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Check if fixtureId exist ": false
+			},
+			"testPassFailCounts": {
+				"Check if fixtureId exist ": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Check if fixtureId exist ": false
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 2,
+	"totalFail": 2,
+	"totalTime": 7122,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Assert  fixturesReturned",
+			"id": "f586339a-0209-4b77-811f-8c8cc8baf905",
+			"url": "http://localhost:3000/",
+			"time": "2019-09-07T16:03:02.923Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Should be 3 fixtures": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "Verify TeamId ",
+			"id": "9fc5ce32-f7d6-4d93-9164-c4ed49aa624c",
+			"url": "http://localhost:3000/fixture/1",
+			"time": "2019-09-07T16:03:02.923Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Check string expected is Home": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Assert FixtureIdValue",
+			"id": "b31d2ea3-2f07-47f6-8d16-a2ed102b0a93",
+			"url": "http://localhost:3000/",
+			"time": "2019-09-07T16:03:02.923Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"The fixtureId property is in the object and is a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetNewFixture",
+			"id": "d5aa1b75-6006-418f-82b1-8baabc260a92",
+			"url": "http://localhost:3000/fixture/4",
+			"time": "2019-09-07T16:03:02.923Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "CreateNewFixture",
+			"id": "32345fe1-399f-49b8-9036-7a9f59fe610c",
+			"url": "http://localhost:3000/fixture",
+			"time": "2019-09-07T16:03:02.923Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "StoreNewFeature",
+			"id": "cb084931-9c49-409e-887f-ee87686219b1",
+			"url": "http://localhost:3000/fixture",
+			"time": "2019-09-07T16:03:02.923Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "DeleteFeature_5",
+			"id": "a1eeceb2-0a7a-4556-ac76-c6bf50d77b23",
+			"url": "http://localhost:3000/fixture/5",
+			"time": "2019-09-07T16:03:02.923Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Check if fixtureId exist ": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		}
+	],
+	"synced": false
+}
